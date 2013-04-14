@@ -10,7 +10,7 @@
 
         // Private instance variable.
         var _var1;
-        
+
         // Public instance variable.
         this.var2 = 13;
 

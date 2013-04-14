@@ -1,0 +1,16 @@
+{
+  "name": "JSExplorationWebSite",
+  "author": "Jonathan Taylor",
+  "description": "A simple web site environment in which to play around with JavaScript and Jasmine unit tests",
+  "homepage": "https://github.com/taylorjg/JSExplorationWebSite",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/taylorjg/JSExplorationWebSite.git"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.1.1",
+    "grunt-contrib-watch": "~0.3.1"
+  }
+}

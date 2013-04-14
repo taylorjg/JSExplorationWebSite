@@ -1,0 +1,23 @@
+{
+	"undef": true,
+	"unused": true,
+	"bitwise": true,
+	"curly": true,
+	"eqnull": true,
+	"eqeqeq": true,
+	"quotmark": "double",
+	"trailing": true,
+	"maxdepth": 3,
+	"strict": true,
+	"globals": {
+		"Fred": true,
+		"_": true,
+		"console": true,
+		"window": true,
+		"describe": true,
+		"it": true,
+		"beforeEach": true,
+		"afterEach": true,
+		"expect": true
+	}
+}
