@@ -90,7 +90,7 @@
             expect(actual).toBe(312);
         });
 
-        it("var2 property when set/get directly works correctly for independent instances", function() {
+        it("var2 property when set/get directly works correctly for independent instances", function () {
             var fred1 = new Fred();
             var fred2 = new Fred();
             fred1.var2 = 704;
@@ -135,6 +135,30 @@
             var actual2 = fred2.myPublicMethod();
             expect(actual1).toBe(4477 + 10);
             expect(actual2).toBe(9985 + 10);
+        });
+
+        it("var3Accessor is visible", function () {
+            var fred = new Fred();
+            var actual = fred.var3Accessor;
+            expect(actual).toBeDefined();
+        });
+
+        it("can set/get the var3 property via the var3Accessor method", function () {
+            var fred = new Fred();
+            fred.var3Accessor(333);
+            var actual = fred.var3Accessor();
+            expect(actual).toBe(333);
+        });
+
+        it("var3 behaves like a static variable", function() {
+            var fred1 = new Fred();
+            var fred2 = new Fred();
+            fred1.var3Accessor(104);
+            fred2.var3Accessor(2006);
+            var actual1 = fred1.var3Accessor();
+            var actual2 = fred2.var3Accessor();
+            expect(actual1).toBe(2006);
+            expect(actual2).toBe(2006);
         });
     });
 } ());
