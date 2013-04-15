@@ -137,6 +137,13 @@
             expect(actual2).toBe(9985 + 10);
         });
 
+        // This test needs to run before the other tests involving the var3 static property because it tests the initial value of this property.
+        it("var3 static property has the correct initial value", function () {
+            var actual = Fred.var3;
+            expect(actual).toBeDefined();
+            expect(actual).toBe(124);
+        });
+
         it("var3Accessor is visible", function () {
             var fred = new Fred();
             var actual = fred.var3Accessor;
@@ -150,7 +157,7 @@
             expect(actual).toBe(333);
         });
 
-        it("var3 behaves like a static variable", function() {
+        it("var3 property behaves like a static variable", function () {
             var fred1 = new Fred();
             var fred2 = new Fred();
             fred1.var3Accessor(104);

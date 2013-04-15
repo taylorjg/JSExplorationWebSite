@@ -8,10 +8,6 @@
 
     window.Fred = function FredConstructor(constructorParam1) {
 
-        if (typeof Fred._var3 === "undefined") {
-            FredConstructor._var3 = null;
-        }
-
         // Private instance variable.
         var _var1;
 
@@ -59,10 +55,12 @@
         return this.myPrivilegedMethod();
     };
 
+    window.Fred.var3 = 124;
+
     window.Fred.prototype.var3Accessor = function (newValue) {
         if (arguments.length === 1) {
-            window.Fred._var3 = newValue;
+            window.Fred.var3 = newValue;
         }
-        return window.Fred._var3;
+        return window.Fred.var3;
     };
 } ());
